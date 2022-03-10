@@ -1,4 +1,4 @@
-class Race {
+abstract class Race {
   private static _racesInstances = 0;
 
   constructor(private _name: string, private _dexterity: number) {
