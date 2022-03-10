@@ -1,9 +1,9 @@
-class Archetype {
-  protected _special: number;
-  protected _cost: number;
+abstract class Archetype {
+  private _special: number;
+  private _cost: number;
   private static _archetypeInstances = 0;
 
-  constructor(protected _name: string) {
+  constructor(private _name: string) {
     this._special = 0;
     this._cost = 0;
     Archetype.archetypeInstances();
