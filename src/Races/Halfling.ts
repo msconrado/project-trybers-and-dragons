@@ -6,7 +6,7 @@ class Halfling extends Race {
 
   constructor(name: string, dexterity: number) {
     super(name, dexterity);
-    this.__maxLifePoints = 99;
+    this.__maxLifePoints = 60;
     Halfling.halflingInstances();
   }
 
