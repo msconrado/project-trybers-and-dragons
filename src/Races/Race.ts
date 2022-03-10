@@ -1,12 +1,12 @@
 class Race {
-  constructor(private name: string, private dexterity: number) {}
+  constructor(private _name: string, private _dexterity: number) {}
 
-  public get getName(): string {
-    return this.name;
+  public get name(): string {
+    return this._name;
   }
 
-  public get getDexterity(): number {
-    return this.dexterity;
+  public get dexterity(): number {
+    return this._dexterity;
   }
 }
 
