@@ -9,3 +9,5 @@ class Race {
     return this.dexterity;
   }
 }
+
+export default Race;
