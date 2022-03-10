@@ -7,10 +7,10 @@ class Elf extends Race {
   constructor(name: string, dexterity: number) {
     super(name, dexterity);
     this.__maxLifePoints = 99;
-    Elf.elffInstances();
+    Elf.elfInstances();
   }
 
-  private static elffInstances() {
+  private static elfInstances() {
     this._elffInstances += 1;
   }
 
