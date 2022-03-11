@@ -8,6 +8,14 @@ class Monster implements SimpleFighter {
     this._lifePoints = 85;
     this._strength = 63;
   }
+
+  public get lifePoints(): number {
+    return this._lifePoints;
+  }
+
+  public get strength(): number {
+    return this._strength;
+  }
 }
 
 export default Monster;
