@@ -1,9 +1,5 @@
 abstract class Race {
-  private static _racesInstances = 0;
-
-  constructor(private _name: string, private _dexterity: number) {
-    Race.racesInstances();
-  }
+  constructor(private _name: string, private _dexterity: number) {}
 
   public get name(): string {
     return this._name;
@@ -11,10 +7,6 @@ abstract class Race {
 
   public get dexterity(): number {
     return this._dexterity;
-  }
-
-  private static racesInstances(): void {
-    this._racesInstances += 1;
   }
 
   public static createdRacesInstances(): number {
