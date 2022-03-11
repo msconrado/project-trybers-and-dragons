@@ -3,20 +3,20 @@ import Archetype from './Archetype';
 
 class Mage extends Archetype {
   private _hability: EnergyType;
-  private static _mageInstances = 0;
+  private static _mageCount = 0;
 
   constructor(name: string) {
     super(name);
     this._hability = 'mana';
-    Mage.mageInstances();
+    Mage.mageCount();
   }
 
-  private static mageInstances() {
-    this._mageInstances += 1;
+  private static mageCount() {
+    this._mageCount += 1;
   }
 
   public static createdArchetypeInstances(): number {
-    return Mage._mageInstances;
+    return Mage._mageCount;
   }
 
   public get energyType(): EnergyType {
