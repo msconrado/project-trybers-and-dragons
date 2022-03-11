@@ -15,7 +15,7 @@ class Character implements Fighter {
   private _energy: Energy;
 
   constructor(public name: string) {
-    this._race = new Elf(name, 0);
+    this._race = new Elf(name, getRandomInt(1, 50));
     this._archetype = new Mage(name);
     this._maxLifePoints = this._race.maxLifePoints / 2;
     this._lifePoints = this._maxLifePoints;
@@ -77,6 +77,10 @@ class Character implements Fighter {
       this._maxLifePoints = this._race.maxLifePoints;
     }
     this._lifePoints = this._maxLifePoints;
+  }
+
+  public special(enemy: Fighter): void {
+    enemy.receiveDamage(this._strength + getRandomInt(10, 50));
   }
 }
 
