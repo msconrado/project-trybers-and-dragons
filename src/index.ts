@@ -16,4 +16,4 @@ const monster2 = new Dragon();
 
 const pvp = new PVP(player2, player3);
 
-export { player1, player2, player3, monster1, monster2 };
+export { player1, player2, player3, monster1, monster2, pvp };
