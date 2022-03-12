@@ -1,12 +1,10 @@
-import Character from '../Character';
-import Fighter, { SimpleFighter } from '../Fighter';
-import Monster from '../Monster';
 import Battle from './Battle';
+import Fighter, { SimpleFighter } from '../Fighter';
 
 class PVE extends Battle {
   constructor(
-    public player1: Character | Fighter,
-    public monstersOrPlayer: Monster[] | SimpleFighter[],
+    public player1: Fighter,
+    public monstersOrPlayer: SimpleFighter[] | Fighter[],
   ) {
     super(player1);
   }
@@ -14,7 +12,6 @@ class PVE extends Battle {
   fight(): number {
     this.monstersOrPlayer.forEach((monster) => {
       this.player1.attack(monster);
-
       monster.attack(this.player1);
     });
 
