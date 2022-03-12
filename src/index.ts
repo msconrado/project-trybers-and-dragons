@@ -1,6 +1,6 @@
 import Character from './Character';
-import Monster from './Monster';
 import Dragon from './Dragon';
+import Monster from './Monster';
 
 const player1 = new Character('Goku');
 
