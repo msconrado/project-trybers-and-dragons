@@ -1,4 +1,4 @@
-import { PVP } from './Battle';
+import { PVE, PVP } from './Battle';
 import Character from './Character';
 import Dragon from './Dragon';
 import Monster from './Monster';
@@ -16,4 +16,6 @@ const monster2 = new Dragon();
 
 const pvp = new PVP(player2, player3);
 
-export { player1, player2, player3, monster1, monster2, pvp };
+const pve = new PVE(player1, [monster1, monster2]);
+
+export { player1, player2, player3, monster1, monster2, pvp, pve };
