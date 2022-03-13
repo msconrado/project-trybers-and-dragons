@@ -3,21 +3,21 @@ import Fighter, { SimpleFighter } from '../Fighter';
 
 class PVE extends Battle {
   constructor(
-    public player1: Fighter,
-    public monstersOrPlayer: SimpleFighter[] | Fighter[],
+    private _player1: Fighter,
+    private _monstersOrPlayer: SimpleFighter[] | Fighter[],
   ) {
-    super(player1);
+    super(_player1);
   }
 
   fight(): number {
-    this.monstersOrPlayer.forEach((monster) => {
+    this._monstersOrPlayer.forEach((monster) => {
       for (
         let index = 0;
-        this.player1.lifePoints > 0 && monster.lifePoints > 0;
+        this._player1.lifePoints > 0 && monster.lifePoints > 0;
         index += 1
       ) {
-        this.player1.attack(monster);
-        monster.attack(this.player1);
+        this._player1.attack(monster);
+        monster.attack(this._player1);
       }
     });
 

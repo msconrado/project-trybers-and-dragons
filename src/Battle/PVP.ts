@@ -2,18 +2,18 @@ import Fighter from '../Fighter';
 import Battle from './Battle';
 
 class PVP extends Battle {
-  constructor(private player1: Fighter, private player2: Fighter) {
-    super(player1);
+  constructor(private _player1: Fighter, private _player2: Fighter) {
+    super(_player1);
   }
 
   fight(): number {
     for (
       let index = 0;
-      this.player1.lifePoints > 0 && this.player2.lifePoints > 0;
+      this._player1.lifePoints > 0 && this._player2.lifePoints > 0;
       index += 1
     ) {
-      this.player1.attack(this.player2);
-      this.player2.attack(this.player1);
+      this._player1.attack(this._player2);
+      this._player2.attack(this._player1);
     }
 
     return super.fight();
