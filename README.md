@@ -1,5 +1,5 @@
 # Boas vindas ao repositório do projeto Trybers and Dragons!
-
+- Este projeto foi feito no bloco 27 do modulo de backend do curso de desenvolvimento Web da [Trybe](https://www.betrybe.com/)
 
 # Habilidades
 
